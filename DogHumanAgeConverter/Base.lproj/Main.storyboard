@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rkl-gr-Y3M">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,42 +13,54 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DogHumanAgeConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dogHuman" translatesAutoresizingMaskIntoConstraints="NO" id="PK5-PA-GyA">
-                                <rect key="frame" x="76" y="142" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dogHuman" translatesAutoresizingMaskIntoConstraints="NO" id="PK5-PA-GyA">
+                                <rect key="frame" x="64.666666666666686" y="95" width="301" height="222"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hundejahre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bb1-L0-ofU">
-                                <rect key="frame" x="148" y="366" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bitte gebe die Anzahl der Hundejahre ein!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kd-v6-4cE">
-                                <rect key="frame" x="36" y="446" width="321" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ew8-oh-dY5">
+                                <rect key="frame" x="56" y="348" width="319" height="35.666666666666629"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hundejahre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bb1-L0-ofU">
+                                        <rect key="frame" x="0.0" y="0.0" width="231.33333333333334" height="35.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDl-Fb-aDr">
+                                        <rect key="frame" x="231.33333333333329" y="0.0" width="87.666666666666657" height="35.666666666666664"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Convert">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ConvertButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9Q-DV-l9n"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte gebe die Anzahl der Hundejahre ein!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kd-v6-4cE">
+                                <rect key="frame" x="70" y="771.66666666666663" width="291" height="57.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDl-Fb-aDr">
-                                <rect key="frame" x="114" y="682" width="164" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Convert">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ConvertButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9Q-DV-l9n"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ew8-oh-dY5" secondAttribute="trailing" constant="55" id="A8I-Ly-xl7"/>
+                            <constraint firstItem="Ew8-oh-dY5" firstAttribute="top" secondItem="PK5-PA-GyA" secondAttribute="bottom" constant="31" id="BO1-SH-Qsq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4kd-v6-4cE" secondAttribute="trailing" constant="69" id="Bvy-oB-zIU"/>
+                            <constraint firstItem="PK5-PA-GyA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64.670000000000002" id="Dxy-Qc-mmX"/>
+                            <constraint firstItem="Ew8-oh-dY5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="GuF-O1-hsF"/>
+                            <constraint firstItem="PK5-PA-GyA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IT5-gW-Etl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4kd-v6-4cE" secondAttribute="bottom" constant="69" id="RPg-3n-NfH"/>
+                            <constraint firstItem="4kd-v6-4cE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="iVv-t2-lXD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PK5-PA-GyA" secondAttribute="trailing" constant="64.329999999999998" id="qYb-KX-8Eu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YFS-5s-3jj">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="kbb-hd-2Vg">
@@ -65,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985.49618320610682" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="983.72093023255809" y="-27.682403433476395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rN5-Nw-dcK">
@@ -73,7 +85,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rkl-gr-Y3M" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2WL-Ye-KqK">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
